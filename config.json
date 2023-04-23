@@ -1,0 +1,25 @@
+{
+    "tokens": {
+        "pushbullet": "o.gfRSGQd9dox7ekXjhjy2CZIdyVGjXVym",
+        "ngrok": {
+            "parkplus": "2LqzrgjlpmxQmBgrPE84fKU9uBh_5fVuy25bbhCCoeV3nifwG",
+            "private": "1aDvfPiqm635Fbw7uylNwOkxWFl_5kP8X14bhKXiwN7QRkMdr"
+        }
+    },
+    "urls": {
+        "ngrok": "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip",
+        "anydesk": "https://download.anydesk.com/linux/anydesk_6.1.1-1_amd64.deb",
+        "vscode": "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64",
+        "smb_conf": "https://github.com/AdeshSingh7/smb-conf.git",
+        "camphish": "https://github.com/AdeshSingh7/Camphish.git",
+        "hound": "https://github.com/techchipnet/hound.git"
+    },
+    "ubuntu": {
+        "tools": "nano vim git wget figlet toilet curl zip apache2 net-tools php nmap ruby libminizip1 libgtkglext1 python3 python3-pip python3-tk python3-dev",
+        "modules": "Flask Pillow PyAutoGUI pyfiglet requests tbomb urllib3"
+    },
+    "termux": {
+        "tools": "nano vim git wget figlet toilet curl zip php nmap ruby python3 python3-pip",
+        "modules": "Flask Pillow pyfiglet requests tbomb urllib3"
+    }
+}
