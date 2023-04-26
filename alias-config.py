@@ -9,9 +9,9 @@ RESET = "\33[0m"
 aliases = [
     "adesh=\"notify-send --urgency=low 'Welcome Back' 'Mr. Adesh Singh'\"",
     "banner=\"python3 ~/Python-Projects/System/banner.py\"",
-    "clear=\"python3 ~/Python-Projects/System/banner.py\"",
     "panel=\"python3 ~/Python-Projects/ParkPlus/panel-config.py\"",
-    "server=\"python3 ~/Python-Projects/ParkPlus/server-config.py\""
+    "server=\"python3 ~/Python-Projects/ParkPlus/server-config.py\"",
+    "clear=\"banner\""
 ]
 
 # Check if alias is already present in .bashrc file
