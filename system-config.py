@@ -103,7 +103,7 @@ if __name__=='__main__':
     status = True
     os.system("clear")
     while status:
-        config_file = "system-config.json"
+        config_file = "~/.config/system-config.json"
         with open(config_file) as f:
             config = json.load(f)
         pushbullet_token = config['tokens']['pushbullet']
