@@ -10,8 +10,8 @@ aliases = [
     "alias adesh=\"notify-send --urgency=low 'Welcome Back' 'Mr. Adesh Singh'\"",
     "alias banner=\"python3 ~/Python-Projects/System/banner.py\"",
     "alias meta=\"python3 ~/Python-Projects/Parkplus/metadata.py\"",
-    "alias panel=\"python3 ~/Python-Projects/ParkPlus/panel-config.py\"",
-    "alias server=\"python3 ~/Python-Projects/ParkPlus/server-config.py\"",
+    "alias panel=\"python3 ~/Python-Projects/Parkplus/panel-config.py\"",
+    "alias server=\"python3 ~/Python-Projects/Parkplus/server-config.py\"",
     "alias clear=\"banner\""
 ]
 
