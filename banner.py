@@ -9,7 +9,7 @@ YELLOW = "\33[1;93m"
 BLUE = "\33[1;94m"
 RESET = "\33[0m"
 DARK_RED = "\33[1;7;91m"
-RIGHT = "\u2713"
+RIGHT = "\u2714"
 
 # Get the system's IP addresses.
 def get_ip_address():
