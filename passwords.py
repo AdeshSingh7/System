@@ -9,7 +9,7 @@ BLUE = "\033[1;34m"
 RESET = "\033[0m"
 LINE = f"{YELLOW}**********************************************{RESET}"
 count = 1
-file_location = "~/.config/passwords.json"
+file_location = "/opt/config/passwords.json"
 
 try:
     with open(file_location) as file:
