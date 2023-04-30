@@ -26,8 +26,7 @@ try:
         for alias in aliases:
             if not is_alias_present(alias):
                 file.write(f"{alias}\n")
-    os.system(f"source ~/.bashrc")
-    print(f"{GREEN}[+] Aliases added successfully!{RESET}")
+        print(f"{GREEN}[+] Aliases added successfully!{RESET}")
 except FileNotFoundError:print(f"{RED}[!] Error: The .bashrc file could not be found.{RESET}")
 except PermissionError:print(f"{RED}[!] Error: You do not have permission to modify the .bashrc file.{RESET}")
 except Exception as e:print(f"{RED}[!] Error: {e}{RESET}")
