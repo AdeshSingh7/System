@@ -14,14 +14,16 @@ RIGHT = "\u2713"
 # Get the system's IP addresses.
 def get_ip_address():
     ip_addresses = os.popen("hostname -I").read().strip().replace(" ", " | ")
-    if ip_addresses:return ip_addresses
+    if ip_addresses:return ip_addresses.upper()
     else:return "___.___.___.___"
 
 # Get the system's MAC addresses.
 def get_mac_address():
-    mac_addresses = os.popen("ifconfig | awk '/ether/ {print $2}'").read().split()
-    if len(mac_addresses) > 1:return mac_addresses
-    else:return [mac_addresses[0],'___.___.___.___']
+    mac_addresses = os.popen("ifconfig | grep 'ether' | awk '{print $2}'").read().strip().split()
+    if len(mac_addresses) > 1:
+        return mac_addresses
+    else:
+        return [mac_addresses[0],"___.___.___.___"]
 
 # Print main banner.
 def banner(terminal_size=86):
@@ -40,8 +42,8 @@ def system_info(terminal_size=86):
     os_name = os.popen("uname -n -o").read().strip()
     serial_number = os.popen("sudo dmidecode -s system-serial-number").read().strip()
     uptime = os.popen("uptime -p").read().strip()
-    lan_mac = get_mac_address()[0]
-    wlan_mac = get_mac_address()[1]
+    lan_mac = get_mac_address()[1].upper()
+    wlan_mac = get_mac_address()[2].upper()
     ip_address = get_ip_address()
     print(f"".center(terminal_size,"❄"))
     print(f"{RED}{RIGHT} Operating System {BLUE}⟶  \33[1;92m {vendor_name}-{os_name}{RESET}")
