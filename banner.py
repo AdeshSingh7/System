@@ -20,10 +20,8 @@ def get_ip_address():
 # Get the system's MAC addresses.
 def get_mac_address():
     mac_addresses = os.popen("ifconfig | grep 'ether' | awk '{print $2}'").read().strip().split()
-    if len(mac_addresses) > 1:
-        return mac_addresses
-    else:
-        return [mac_addresses[0],"___.___.___.___"]
+    if len(mac_addresses) > 1:return mac_addresses
+    else:return [mac_addresses[0],"___.___.___.___"]
 
 # Print main banner.
 def banner(terminal_size=86):
@@ -46,12 +44,12 @@ def system_info(terminal_size=86):
     wlan_mac = get_mac_address()[2].upper()
     ip_address = get_ip_address()
     print(f"".center(terminal_size,"❄"))
-    print(f"{RED}{RIGHT} Operating System {BLUE}⟶  \33[1;92m {vendor_name}-{os_name}{RESET}")
-    print(f"{RED}{RIGHT} Serial Number    {BLUE}⟶  \33[1;92m {serial_number}{RESET}")
-    print(f"{RED}{RIGHT} System Uptime    {BLUE}⟶  \33[1;92m {uptime}{RESET}")
-    print(f"{RED}{RIGHT} LAN MAC Address  {BLUE}⟶  \33[1;92m {lan_mac}{RESET}")
-    print(f"{RED}{RIGHT} WLAN MAC Address {BLUE}⟶  \33[1;92m {wlan_mac}{RESET}")
-    print(f"{RED}{RIGHT} LAN IP Address   {BLUE}⟶  \33[1;92m {ip_address}{RESET}")
+    print(f"{RED}{RIGHT} Operating System {BLUE}⟶  {GREEN} {vendor_name}-{os_name}{RESET}")
+    print(f"{RED}{RIGHT} Serial Number    {BLUE}⟶  {GREEN} {serial_number}{RESET}")
+    print(f"{RED}{RIGHT} System Uptime    {BLUE}⟶  {GREEN} {uptime}{RESET}")
+    print(f"{RED}{RIGHT} LAN MAC Address  {BLUE}⟶  {GREEN} {lan_mac}{RESET}")
+    print(f"{RED}{RIGHT} WLAN MAC Address {BLUE}⟶  {GREEN} {wlan_mac}{RESET}")
+    print(f"{RED}{RIGHT} LAN IP Address   {BLUE}⟶  {GREEN} {ip_address}{RESET}")
     print(f"".center(terminal_size,"❄"))
 
 if __name__=='__main__':
